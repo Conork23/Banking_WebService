@@ -38,7 +38,7 @@ public class CustomerService {
         List<Customer> customers = new ArrayList<>();
         if(id > -1){
             try {
-                customers = (List<Customer>) db.getCustomer(id);
+                customers.add(db.getCustomer(id));
             } catch (SQLException | NamingException ex) {
                 Logger.getLogger(CustomerService.class.getName()).log(Level.SEVERE, null, ex);
             }
